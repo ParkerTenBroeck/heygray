@@ -1,12 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 | Hey Grey</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg-0: light-dark(#ffffff, #1d1d1d);
+      --bg-1: light-dark(#eeeeee, #131313);
+      --fg-0: light-dark(#111111, #eeeeee);
+      --fg-1: light-dark(#333333, #cccccc);
+      --fg-2: light-dark(#555555, #999999);
+      --grey-light: light-dark(#a4a4a4, #777777);
+      --primary: light-dark(#ffd979, #daa520);
+      --text-highlight: color-mix(in srgb-linear, var(--primary) 50%, transparent);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: var(--bg-0);
+      color: var(--fg-1);
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    ::selection {
+      background: var(--text-highlight);
+      color: var(--fg-0);
+    }
+
+    main {
+      width: min(100%, 48rem);
+      min-height: calc(100vh - 4rem);
+      padding: 2rem 0.5rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--fg-0);
+      font-size: clamp(3rem, 12vw, 6.5rem);
+      line-height: 0.95;
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--fg-0);
+      text-decoration: underline 0.3ex;
+      text-decoration-color: var(--grey-light);
+      text-underline-offset: 0.12em;
+      font-weight: 700;
+      transition: text-decoration-color 120ms ease, color 120ms ease;
+    }
+
+    a:hover {
+      text-decoration-color: var(--primary);
+    }
+
+    .center {
+      display: inline-block;
+      text-wrap: nowrap;
+    }
+
+    .accent {
+      color: var(--primary);
+      text-decoration-color: var(--primary);
+      text-decoration: underline 0.3ex;
+      transition: text-decoration-color 120ms ease, color 120ms ease;
+    }
+    a:hover>.accent {
+      text-decoration-color: var(--grey-light);
+    }
+
+    p {
+      margin: 1.5rem 0 0;
+      max-width: 34rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.5rem;
+      }
+
+      main {
+        min-height: calc(100vh - 3rem);
+        padding: 1rem 0;
+      }
+    }
+  </style>
+</head>
 <body>
-
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
+  <main>
+    <h1>
+      <a class="center" href="https://heygrey.ca" rel="noreferrer">
+        Hey! Its Gr<span class="accent">e</span>y
+      </a>
+    </h1>
+  </main>
 </body>
 </html>
-
-
